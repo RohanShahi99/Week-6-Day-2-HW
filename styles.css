@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar - Fixed at the Top */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency for a clean look */
+    border-bottom: 2px solid #ddd;
+    position: fixed; /* Fixes navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures navbar stays above content */
+}
+
+/* Logo */
+.logo img {
+    width: 120px;
+}
+
+/* Navigation Menu */
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Items */
+.main-menu ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    background: #9ed034; /* Green background */
+    border-radius: 5px;
+}
+
+/* Hover Effects */
+.main-menu ul li a:hover {
+    background: #4288C3; /* Blue hover effect */
+    color: white;
+}
+
+/* Active Page Styling */
+.main-menu ul li.active a {
+    background: #4288C3; /* Blue background */
+    color: white;
+}
+
+/* Hero Section (Cliff Ocean Image) */
+.hero {
+    background: url('images/cliff_ocean.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px; /* Adds space below fixed navbar */
+}
+
+/* Main Heading */
+main h1 {
+    text-align: center;
+    color: green;
+}
+
+/* Main Content */
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content-box {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.content-box h2 {
+    color: #9ed034;
+}
+
+/* Partners Section */
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4288C3;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.partner img {
+    width: 90px;
+    border-radius: 50%;
+    background: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #ecfab8;
+    text-align: center;
+    padding: 15px;
+}
+
+.social .fa {
+    padding: 10px;
+    font-size: 16px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.fa-facebook { background: #3B5998; color: white; }
+.fa-twitter { background: #55ACEE; color: white; }
+.fa-instagram { background: #125688; color: white; }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-menu ul li {
+        margin: 10px 0;
+    }
+
+    .content-box {
+        width: 90%;
+    }
+
+    .partners {
+        flex-direction: column;
+    }
+}
